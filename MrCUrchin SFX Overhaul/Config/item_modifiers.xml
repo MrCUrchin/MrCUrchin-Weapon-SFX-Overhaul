@@ -1,0 +1,51 @@
+<VinallaAdditionSFX>    
+<!-- Automatics (Loop Needed?) -->
+    <!-- Pipe SMG "gunMGT0PipeMachineGun" (+) -->
+            <!-- Adds Pipe SMG Suppressed as a New Item Modifer -->
+        <append xpath="/item_modifiers/item_modifier">
+            <item_property_overrides name="gunMGT0PipeMachineGun">
+                <property name="Sound_start" value="pipe_smg_s_fire"/>
+                <property name="Sound_loop" value="pipe_smg_s_fire"/>
+            </item_property_overrides>        
+        </append>
+
+    <!-- Tactical AR "gunMGT2TacticalAR" | value="ak47_s_fire" (+) -->
+        <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunMGT2TacticalAR']/property[@value='ak47_s_fire']/@value">tacticalar_s_fire</set>
+
+<!-- Pistols -->
+    <!-- 44 Magnum "gunHandgunT2Magnum44" | value="pump_shotgun_s_fire" (+) -->
+        <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunHandgunT2Magnum44']/property[@value='pump_shotgun_s_fire']/@value">44magnum_s_fire</set> 
+
+    <!-- Desert Vulture "gunHandgunT3DesertVulture" | value="pump_shotgun_s_fire" (+) -->
+        <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunHandgunT3DesertVulture']/property[@value='pump_shotgun_s_fire']/@value">desertvulture_s_fire</set>  
+    
+    <!-- Pipe Pistol "gunHandgunT0PipePistol" | value="pistol_s_fire" (+) -->
+        <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunHandgunT0PipePistol']/property[@value='pistol_s_fire']/@value">pipe_pistol_s_fire</set> 
+
+<!-- Shotguns -->
+    <!-- Auto Shotgun "gunShotgunT3AutoShotgun" | value="pump_shotgun_s_fire" (+) -->
+        <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunShotgunT3AutoShotgun']/property[@value='pump_shotgun_s_fire']/@value">auto_shotgun_s_fire</set> 
+
+    <!-- Double Barrel Shotgun "gunShotgunT1DoubleBarrel" | value="pump_shotgun_s_fire" (+) -->
+        <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunShotgunT1DoubleBarrel']/property[@value='pump_shotgun_s_fire']/@value">shotgundb_s_fire</set> 
+
+    <!-- Pipe Shotgun "gunShotgunT0PipeShotgun" () -->
+       
+            <!-- Adds Pipe Shotgun Suppressed as a New Item Modifer -->
+        <append xpath="/item_modifiers/item_modifier">
+            <item_property_overrides name="gunShotgunT0PipeShotgun">
+                <property name="Sound_start" value="pipe_shotgun_s_fire"/>
+            </item_property_overrides>        
+        </append> 
+
+<!-- Rifles -->
+    <!-- Lever Action Rifle "gunRifleT2LeverActionRifle" | value="sniperrifle_s_fire" (+) -->
+        <set xpath="/item_modifiers/item_modifier/item_property_overrides[@name='gunRifleT2LeverActionRifle']/property[@value='sniperrifle_s_fire']/@value">lever_action_rifle_s_fire</set>   
+
+    <!-- Pipe Rifle "gunRifleT0PipeRifle" (+) -->
+        <append xpath="/item_modifiers/item_modifier">
+            <item_property_overrides name="gunRifleT0PipeRifle">
+                <property name="Sound_start" value="pipe_rifle_s_fire"/>
+            </item_property_overrides>        
+        </append>
+</VinallaAdditionSFX>

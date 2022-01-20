@@ -1,0 +1,233 @@
+<VinallaSFX>                                                                           
+<!-- Automatics [Works Clips must be 44.1hz & no longer than 21 frames]  -->
+    <!-- AK "ak47_fire" [fire, s_fire, fire_end] -->
+        <set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/AudioClip[contains(@ClipName, 'ak47_fire1')]/@ClipName">#@modfolder:Resources/ak47.unity3d?ak47_fire-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/AudioClip[contains(@ClipName, 'ak47_fire2')]/@ClipName">#@modfolder:Resources/ak47.unity3d?ak47_fire-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/AudioClip[contains(@ClipName, 'ak47_fire3')]/@ClipName">#@modfolder:Resources/ak47.unity3d?ak47_fire-3</set>
+        <set xpath="/Sounds/SoundDataNode[@name='ak47_fire']/AudioClip[contains(@ClipName, 'ak47_fire4')]/@ClipName">#@modfolder:Resources/ak47.unity3d?ak47_fire-4</set>
+        
+        <set xpath="/Sounds/SoundDataNode[@name='ak47_fire_end']/AudioClip[contains(@ClipName, 'ak47_fire_end')]/@ClipName">#@modfolder:Resources/ak47.unity3d?ak47_end-1</set>
+
+        <set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/AudioClip[contains(@ClipName, 'ak47_s_fire1')]/@ClipName">#@modfolder:Resources/ak47.unity3d?ak47_s_fire-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/AudioClip[contains(@ClipName, 'ak47_s_fire2')]/@ClipName">#@modfolder:Resources/ak47.unity3d?ak47_s_fire-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/AudioClip[contains(@ClipName, 'ak47_s_fire3')]/@ClipName">#@modfolder:Resources/ak47.unity3d?ak47_s_fire-3</set>
+        <set xpath="/Sounds/SoundDataNode[@name='ak47_s_fire']/AudioClip[contains(@ClipName, 'ak47_s_fire4')]/@ClipName">#@modfolder:Resources/ak47.unity3d?ak47_s_fire-4</set>
+
+    <!-- M60 "m60_fire" [fire, s_fire, fire_end] (NOTE: Suppressed Does Not have good enough base, look back at later) -->
+        <set xpath="/Sounds/SoundDataNode[@name='m60_fire']/AudioClip[contains(@ClipName, 'm60_fire1')]/@ClipName">#@modfolder:Resources/m60.unity3d?m60_fire-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='m60_fire']/AudioClip[contains(@ClipName, 'm60_fire2')]/@ClipName">#@modfolder:Resources/m60.unity3d?m60_fire-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='m60_fire']/AudioClip[contains(@ClipName, 'm60_fire3')]/@ClipName">#@modfolder:Resources/m60.unity3d?m60_fire-3</set>
+        <set xpath="/Sounds/SoundDataNode[@name='m60_fire']/AudioClip[contains(@ClipName, 'm60_fire4')]/@ClipName">#@modfolder:Resources/m60.unity3d?m60_fire-4</set>
+
+        <!--<set xpath="/Sounds/SoundDataNode[@name='m60_fire_end']/AudioClip/@ClipName">#@modfolder:Resources/m60.unity3d?m60_fire_end</set> [DISABLED] -->
+
+        <set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/AudioClip[contains(@ClipName, 'm60_s_fire1')]/@ClipName">#@modfolder:Resources/m60.unity3d?m60_s_fire-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/AudioClip[contains(@ClipName, 'm60_s_fire2')]/@ClipName">#@modfolder:Resources/m60.unity3d?m60_s_fire-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/AudioClip[contains(@ClipName, 'm60_s_fire3')]/@ClipName">#@modfolder:Resources/m60.unity3d?m60_s_fire-3</set>
+        <set xpath="/Sounds/SoundDataNode[@name='m60_s_fire']/AudioClip[contains(@ClipName, 'm60_s_fire4')]/@ClipName">#@modfolder:Resources/m60.unity3d?m60_s_fire-4</set>
+
+    <!-- Pipe SMG "pipe_smg_fire" [fire] (Needs Suppressed) -->
+        <set xpath="/Sounds/SoundDataNode[@name='pipe_smg_fire']/AudioClip/@ClipName">#@modfolder:Resources/pipe_smg.unity3d?pipe_smg_fire-1</set>
+        
+            <!-- Adds Serperate Suppressed Audio "pipe_smg_s_fire" [SoundDataNode Similar to "smg_s_fire"]-->
+        <append xpath="/Sounds">
+            <SoundDataNode name="pipe_smg_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+            <AudioClip ClipName="#@modfolder:Resources/pipe_smg.unity3d?pipe_smg_s_fire-1"/>
+            <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
+        </append>
+
+    <!-- Tactical AR "tacticalar_fire" [fire, s_fire] (Additional Variations?) -->
+        <set xpath="/Sounds/SoundDataNode[@name='tacticalar_fire']/AudioClip/@ClipName">#@modfolder:Resources/tactical_ar.unity3d?tacticalar_fire-1</set>
+
+            <!-- Adds Serperate Suppressed Audio "tacticalar_s_fire" [SoundDataNode Similar to "ak47_s_fire"]-->
+        <append xpath="/Sounds">
+            <SoundDataNode name="tacticalar_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="5" noise="200" time="2" heat_map_strength="0.3" heat_map_time="120"/>
+            <AudioClip ClipName="#@modfolder:Resources/tactical_ar.unity3d?tacticalar_s_fire-1"/>
+            <!-- <AudioClip ClipName="#@modfolder:Resources/tactical_ar.unity3d?tacticalar_s_fire-2"/> [Disabled Audio Clicking]-->
+            <AudioClip ClipName="#@modfolder:Resources/tactical_ar.unity3d?tacticalar_s_fire-3"/>
+            <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="60"/> <MaxVoicesPerEntity value="30"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+        </append>
+
+    <!-- SMG "smg_fire"  [fire, s_fire, fire_end] (SMG SFX Weird Sounding) -->
+        <set xpath="/Sounds/SoundDataNode[@name='smg_fire']/AudioClip[contains(@ClipName, 'smg_fire1')]/@ClipName">#@modfolder:Resources/smg.unity3d?smg_fire-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='smg_fire']/AudioClip[contains(@ClipName, 'smg_fire2')]/@ClipName">#@modfolder:Resources/smg.unity3d?smg_fire-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='smg_fire']/AudioClip[contains(@ClipName, 'smg_fire3')]/@ClipName">#@modfolder:Resources/smg.unity3d?smg_fire-3</set>
+        <set xpath="/Sounds/SoundDataNode[@name='smg_fire']/AudioClip[contains(@ClipName, 'smg_fire4')]/@ClipName">#@modfolder:Resources/smg.unity3d?smg_fire-4</set>
+
+        <set xpath="/Sounds/SoundDataNode[@name='smg_fire_end']/AudioClip/@ClipName">#@modfolder:Resources/smg.unity3d?smg_fire_end</set>
+
+        <set xpath="/Sounds/SoundDataNode[@name='smg_s_fire']/AudioClip/@ClipName">#@modfolder:Resources/smg.unity3d?smg_s_fire-1</set>
+
+        <append xpath="/Sounds/SoundDataNode[starts-with(@name, 'smg_')]"> 
+            <LowestPitch name="0.8"/>
+            <HighestPitch name="1.0"/>
+        </append>
+
+<!-- Pistols -->
+    <!-- 44 Magnum "44magnum_fire" [fire, s_fire] (Additional Variations?) -->
+        <remove xpath="/Sounds/SoundDataNode[@name='44magnum_fire']"/>
+
+        <append xpath="/Sounds">
+            <SoundDataNode name="44magnum_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="5" range="200" volume="500" time="3" heat_map_strength="0.5" heat_map_time="20"/>
+            <AudioClip ClipName="#@modfolder:Resources/44_magnum.unity3d?44magnum_fire-1"/>
+            <AudioClip ClipName="#@modfolder:Resources/44_magnum.unity3d?44magnum_fire-2"/>
+            <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+        </append>
+    
+
+            <!-- Adds Serperate Suppressed Audio "44magnum_s_fire" [SoundDataNode Similar to "pump_shotgun_s_fire"]-->
+        <append xpath="/Sounds">
+            <SoundDataNode name="44magnum_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="5" noise="200" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+            <AudioClip ClipName="#@modfolder:Resources/44_magnum.unity3d?44magnum_s_fire-1"/>
+            <AudioClip ClipName="#@modfolder:Resources/44_magnum.unity3d?44magnum_s_fire-2"/>
+            <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+        </append>  
+
+    <!-- Desert Vulture "desertvulture_fire" [fire, s_fire] -->
+        <set xpath="/Sounds/SoundDataNode[@name='desertvulture_fire']/AudioClip[contains(@ClipName, 'desertvulture_fire1')]/@ClipName">#@modfolder:Resources/desert_vulture.unity3d?desertvulture_fire-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='desertvulture_fire']/AudioClip[contains(@ClipName, 'desertvulture_fire2')]/@ClipName">#@modfolder:Resources/desert_vulture.unity3d?desertvulture_fire-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='desertvulture_fire']/AudioClip[contains(@ClipName, 'desertvulture_fire3')]/@ClipName">#@modfolder:Resources/desert_vulture.unity3d?desertvulture_fire-3</set>
+
+        <!-- Adds Serperate Suppressed Audio "desertvulture_s_fire" [SoundDataNode Similar to "pump_shotgun_s_fire"]-->
+        <append xpath="/Sounds">
+            <SoundDataNode name="desertvulture_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+            <AudioClip ClipName="#@modfolder:Resources/desert_vulture.unity3d?desertvulture_s_fire-1"/>
+            <AudioClip ClipName="#@modfolder:Resources/desert_vulture.unity3d?desertvulture_s_fire-2"/>
+            <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+        </append>
+
+    <!--Pipe Pistol "pipe_pistol_fire" [fire, s_fire] (Additional Variations?) -->
+        <set xpath="/Sounds/SoundDataNode[@name='pipe_pistol_fire']/AudioClip/@ClipName">#@modfolder:Resources/pipe_pistol.unity3d?pipe_pistol_fire-1</set>
+
+            <!-- Adds Serperate Suppressed Audio "pipe_pistol_s_fire" [SoundDataNode Similar to "pistol_s_fire"]-->
+        <append xpath="/Sounds">
+            <SoundDataNode name="pipe_pistol_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="0" noise="17" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+            <AudioClip ClipName="#@modfolder:Resources/pipe_pistol.unity3d?pipe_pistol_s_fire-1"/>
+            <AudioClip ClipName="#@modfolder:Resources/pipe_pistol.unity3d?pipe_pistol_s_fire-2"/>
+            <LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+        </append>
+
+    <!--Pistol (Baretta) [fire, s_fire] -->
+        <set xpath="/Sounds/SoundDataNode[@name='Pistol_Fire']/AudioClip/@ClipName">#@modfolder:Resources/pistol.unity3d?pistol_fire-1</set>
+
+        <set xpath="/Sounds/SoundDataNode[@name='pistol_s_fire']/AudioClip/@ClipName">#@modfolder:Resources/pistol.unity3d?pistol_s_fire-1</set>
+
+<!-- Shotgun -->
+    <!-- Auto Shotgun "autoshotgun_fire" [fire, s_fire] (Additional Variations?) -->
+        <set xpath="/Sounds/SoundDataNode[@name='autoshotgun_fire']/AudioClip[contains(@ClipName, 'autoshotgun_fire1')]/@ClipName">#@modfolder:Resources/auto_shotgun.unity3d?auto_shotgun_fire-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='autoshotgun_fire']/AudioClip[contains(@ClipName, 'autoshotgun_fire2')]/@ClipName">#@modfolder:Resources/auto_shotgun.unity3d?auto_shotgun_fire-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='autoshotgun_fire']/AudioClip[contains(@ClipName, 'autoshotgun_fire3')]/@ClipName">#@modfolder:Resources/auto_shotgun.unity3d?auto_shotgun_fire-3</set>
+
+            <!-- Adds Serperate Suppressed Audio "auto_shotgun_s_fire" [SoundDataNode Similar to "pump_shotgun_s_fire"] -->
+        <append xpath="/Sounds">
+            <SoundDataNode name="auto_shotgun_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="5" noise="200" time="2" heat_map_strength="0.3" heat_map_time="120"/>
+            <AudioClip ClipName="#@modfolder:Resources/auto_shotgun.unity3d?auto_shotgun_s_fire-1"/>
+            <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+        </append>
+
+    <!-- Double Barrel Shotgun "shotgundb_fire" [fire, s_fire] -->
+        <set xpath="/Sounds/SoundDataNode[@name='shotgundb_fire']/AudioClip[contains(@ClipName, 'shotgundb_fire1')]/@ClipName">#@modfolder:Resources/shotgundb.unity3d?shotgundb_fire-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='shotgundb_fire']/AudioClip[contains(@ClipName, 'shotgundb_fire2')]/@ClipName">#@modfolder:Resources/shotgundb.unity3d?shotgundb_fire-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='shotgundb_fire']/AudioClip[contains(@ClipName, 'shotgundb_fire3')]/@ClipName">#@modfolder:Resources/shotgundb.unity3d?shotgundb_fire-3</set>
+
+            <!-- Adds Serperate Suppressed Audio "shotgundb_s_fire" [SoundDataNode Similar to "pump_shotgun_s_fire"]-->    
+        <append xpath="/Sounds">
+            <SoundDataNode name="shotgundb_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+            <AudioClip ClipName="#@modfolder:Resources/shotgundb.unity3d?shotgundb_s_fire-1"/>
+            <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+        </append>
+
+    <!-- Pipe Shotgun "pipe_shotgun_fire" [fire] (Needs Suppressed Variant : Looking into this) (Additional Variations?) -->
+        <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_fire']/AudioClip[contains(@ClipName, 'pipe_shotgun_fire1')]/@ClipName">#@modfolder:Resources/pipe_shotgun.unity3d?pipe_shotgun_fire-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_fire']/AudioClip[contains(@ClipName, 'pipe_shotgun_fire2')]/@ClipName"> #@modfolder:Resources/pipe_shotgun.unity3d?pipe_shotgun_fire-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_fire']/AudioClip[contains(@ClipName, 'pipe_shotgun_fire3')]/@ClipName">#@modfolder:Resources/pipe_shotgun.unity3d?pipe_shotgun_fire-3</set>
+        <set xpath="/Sounds/SoundDataNode[@name='pipe_shotgun_fire']/AudioClip[contains(@ClipName, 'pipe_shotgun_fire4')]/@ClipName"> #@modfolder:Resources/pipe_shotgun.unity3d?pipe_shotgun_fire-4</set>
+
+            <!-- Adds Serperate Suppressed Audio "pipe_shotgun_s_fire" [SoundDataNode Similar to "pump_shotgun_s_fire"]-->          
+        <append xpath="/Sounds">
+            <SoundDataNode name="pipe_shotgun_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="5" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+            <AudioClip ClipName="#@modfolder:Resources/pipe_shotgun.unity3d?pipe_shotgun_s_fire-1"/>
+            <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+        </append>
+    
+    <!-- Pump Shotgun "pump_shotgun_fire" [fire, s_fire] (Additional Variations?) -->
+        <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/AudioClip[contains(@ClipName, 'pump_shotgun_fire1')]/@ClipName">#@modfolder:Resources/pump_shotgun.unity3d?pump_shotgun_fire-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/AudioClip[contains(@ClipName, 'pump_shotgun_fire2')]/@ClipName"> #@modfolder:Resources/pump_shotgun.unity3d?pump_shotgun_fire-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/AudioClip[contains(@ClipName, 'pump_shotgun_fire3')]/@ClipName">#@modfolder:Resources/pump_shotgun.unity3d?pump_shotgun_fire-3</set>
+        <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_fire']/AudioClip[contains(@ClipName, 'pump_shotgun_fire4')]/@ClipName"> #@modfolder:Resources/pump_shotgun.unity3d?pump_shotgun_fire-4</set>
+
+        <set xpath="/Sounds/SoundDataNode[@name='pump_shotgun_s_fire']/AudioClip/@ClipName">#@modfolder:Resources/pump_shotgun.unity3d?pump_shotgun_s_fire-1</set>
+
+        <append xpath="/Sounds/SoundDataNode[starts-with(@name, 'pump_shotgun_')]">
+            <LowestPitch name="0.8"/>
+            <HighestPitch name="1.2"/>
+        </append>  
+
+<!-- Sniper Rifle -->
+    <!-- Level Action Rifle "lever_action_rifle_fire" [fire, s_fire] (Additional Variations?) -->
+        <set xpath="/Sounds/SoundDataNode[@name='lever_action_rifle_fire']/AudioClip/@ClipName">#@modfolder:Resources/lever_action.unity3d?lever_action_rifle_fire-1</set>
+        
+            <!-- Adds Serperate Suppressed Audio "lever_action_rifle_s_fire" [SoundDataNode Similar to "sniperrifle_s_fire"] -->
+        <append xpath="/Sounds">
+            <SoundDataNode name="lever_action_rifle_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="5" range="140" volume="300" time="2" heat_map_strength="0.5" heat_map_time="20"/>
+            <AudioClip ClipName="#@modfolder:Resources/lever_action.unity3d?lever_action_rifle_s_fire-1"/>
+            <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+        </append>
+
+    <!-- Pipe Rifle "pipe_rifle_fire" [fire] (Additional Variations?) -->  
+        <set xpath="/Sounds/SoundDataNode[@name='pipe_rifle_fire']/AudioClip/@ClipName">#@modfolder:Resources/pipe_rifle.unity3d?pipe_rifle_fire-1</set>
+
+            <!-- Adds Serperate Suppressed Audio "pipe_rifle_s_fire" [SoundDataNode Similar to "sniperrifle_s_fire"] -->
+        <append xpath="/Sounds">
+            <SoundDataNode name="pipe_rifle_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+            <Noise ID="0" noise="17" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+            <AudioClip ClipName="#@modfolder:Resources/pipe_rifle.unity3d?pipe_rifle_s_fire-1"/>
+            <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode> 
+        </append>
+
+    <!-- Sniper "sniperrifle_fire" [fire, s_fire] (Additional Variations?) -->
+        <set xpath="/Sounds/SoundDataNode[@name='sniperrifle_fire']/AudioClip/@ClipName">#@modfolder:Resources/sniper_rifle.unity3d?sniper_rifle_fire-1</set>
+        
+        <set xpath="/Sounds/SoundDataNode[@name='sniperrifle_s_fire']/AudioClip/@ClipName">#@modfolder:Resources/sniper_rifle.unity3d?sniper_rifle_s_fire-1</set>
+
+        <append xpath="/Sounds/SoundDataNode[starts-with(@name, 'sniperrifle_')]">
+            <LowestPitch name="0.9"/>
+            <HighestPitch name="1.0"/>
+        </append>
+
+    <!-- SharpShooter "sharpshooter_fire" [fire, s_fire] (Additional Variations?) --> 
+        <set xpath="/Sounds/SoundDataNode[@name='sharpshooter_fire']/AudioClip/@ClipName">#@modfolder:Resources/sharp_shooter.unity3d?sharpshooter_fire-1</set>
+
+        <set xpath="/Sounds/SoundDataNode[@name='sharpshooter_s_fire']/AudioClip/@ClipName">#@modfolder:Resources/sharp_shooter.unity3d?sharpshooter_s_fire-1</set>
+        
+        <append xpath="/Sounds/SoundDataNode[starts-with(@name, 'sharpshooter_')]">
+            <LowestPitch name="0.8"/>
+            <HighestPitch name="1.2"/>
+        </append>
+
+<!-- Explosions -->
+
+    <!-- Explosions "explosion1" "explosion2" "explosion3" (Not Sure What these reflect)-->
+        <set xpath="/Sounds/SoundDataNode[@name='explosion1']/AudioClip[contains(@ClipName, 'explosion1')]/@ClipName">#@modfolder:Resources/grenades.unity3d?grenade_explosion_generic-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='explosion2']/AudioClip[contains(@ClipName, 'explosion2')]/@ClipName">#@modfolder:Resources/grenades.unity3d?grenade_explosion_generic-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='explosion3']/AudioClip[contains(@ClipName, 'explosion3')]/@ClipName">#@modfolder:Resources/grenades.unity3d?grenade_explosion_generic-3</set> 
+
+    <!-- Grenades "explosion_grenade" (Looking into how to seperate this so each throwable has a unique explosion) [Clean Audio a Bit] [Works w/ Impact & Normal Grenades]-->
+        <set xpath="/Sounds/SoundDataNode[@name='explosion_grenade']/AudioClip[contains(@ClipName, 'explosion_grenade1')]/@ClipName">#@modfolder:Resources/grenades.unity3d?grenade_explosion_generic-1</set>
+        <set xpath="/Sounds/SoundDataNode[@name='explosion_grenade']/AudioClip[contains(@ClipName, 'explosion_grenade2')]/@ClipName">#@modfolder:Resources/grenades.unity3d?grenade_explosion_generic-2</set>
+        <set xpath="/Sounds/SoundDataNode[@name='explosion_grenade']/AudioClip[contains(@ClipName, 'explosion_grenade3')]/@ClipName">#@modfolder:Resources/grenades.unity3d?grenade_explosion_generic-3</set>
+        <set xpath="/Sounds/SoundDataNode[@name='explosion_grenade']/AudioClip[contains(@ClipName, 'explosion_grenade4')]/@ClipName">#@modfolder:Resources/grenades.unity3d?grenade_explosion_generic-4</set>
+
+</VinallaSFX>
+
+
