@@ -1,0 +1,126 @@
+** CREDITS **
+
+** Help / External Support for Developing this Mod**
+
+This section I want to take a moment to recognize those who helped me create this beautiful mod. Especially given the fact I have little no experience with 7D2D Modding.
+
+- Guppy's Unofficial 7DtD Modding Server
+    * Amazing Help Wealth of Information, everyone is exteremly friendly and all appreciate each other for any contributions they bring to the table.
+
+- Indvididual Who Helped in Any Capacity for Creating this Mod
+    * Telric indirecetly helped design the xml commands to override the vinalla SFX in place of this mods. Without this person this mod would not be possible. 
+        - Who: Telric
+        - Website: https://community.7daystodie.com/topic/25020-replacing-vanilla-weapons-audio/
+        - CODE: <set xpath="/Sounds/SoundDataNode[@name='NAME']/AudioClip/@ClipName">#@modfolder:Resources/NAME.unity3d?NAME </set>
+            - Allows the modder to replace aspects of the vanilla game with their own files
+    
+    * saminal, a discord user from Guppy's Modding Discord Server, helped me understand and also provided xpath design for changing specefic AudioClips within a SoundDataNode.
+        - Who: saminal
+        - Discord: Guppy's Unofficial 7DtD Modding Server
+        - CODE: <set xpath="/Sounds/SoundDataNode[@name='NAME']/AudioClip[contains(@ClipName, 'NAME')]/@ClipName">
+            - Gives the ability to replace specefic AudioClip Files
+        - CODE: <set xpath="/Sounds/SoundDataNode[@name='NAME']/AudioClip[2]/@ClipName">
+            - Gives the ability to replace specefic AudioClip Files [Alternate]
+    
+    * Gruppycur, a discord user from Guppy's Modding Discord Server, helped me solve one of the most annoying audio bugs, the infomous clicking/popping/cracking sound at the end of the audio track.
+        - Who: Gruppycur
+        - Discord: Guppy's Unofficial 7DtD Modding Server
+        - Solved Audio Bug
+            - Fix was Removing/Reducing/Fade-in Audio at the beginning of an audio track and then the audio bug would disappear
+        - Note: This input will be was greatest addition to this mod since the starting this mod.
+
+**SFX CREDITS**
+
+- Sounds from Tarkov -
+
+╔═══════════════════════╤═══════════════════════════════════════╤════════════════════════════════╗
+║ 7D2D Sound            │ Audio File Name                       │ Note                           ║
+╠═══════════════════════╪═══════════════════════════════════════╪════════════════════════════════╣
+║ ak47_end-1            │ ak74_outdoor_close_loop_tail          │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ ak47_s_fire-1         │ ak74_loop_outdoor_close_silenced      │ Parent Suppressed AR           ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ ak47_s_fire-1         │ ak74_loop_outdoor_close_silenced_tail │ Parent Suppressed AR           ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ auto_shotgun_fire-1   │ saiga_outdoor_close1                  │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ auto_shotgun_fire-2   │ saiga_outdoor_close2                  │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ auto_shotgun_s_fire-2 │ saiga_fire_silenced_close             │ Inactive                       ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ m60_s_fire-1-4        │ scar_l_indoor_silenced_close          │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ m60_s_fire-1-4        │ scar_l_indoor_silenced_close_tail     │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pipe_pistol_fire-1    │ 1911_fire_close                       │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pipe_pistol_s_fire-1  │ 1911_fire_silenced_close1             │ Inactive                       ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pipe_pistol_s_fire-2  │ 1911_fire_silenced_close2             │ Inactive                       ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pipe_rifle_fire-1     │ vpo215_fire_close                     │ Parent Suppressed Sniper Rifle ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pipe_shotgun_fire-1-2 │ toz_fire_close1                       │ No Suppressed Files ATM        ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pipe_shotgun_fire-3-4 │ toz_fire_close2                       │ No Suppressed Files ATM        ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pipe_smg_fire-1       │ stm9_fire_outdoor_close               │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pipe_smg_s_fire-1     │ stm9_fire_outdoor_silenced_close      │ Inactive                       ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pistol_fire-1         │ m9a3_fire_close                       │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pistol_s_fire-1       │ m9a3_fire_close_silenced              │ Parent Suppressed Pistol       ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pump_shotgun_fire-1-2 │ rem870_fire_close1                    │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pump_shotgun_fire-3-4 │ rem870_fire_close2                    │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ pump_shotgun_s_fire-1 │ mr153_fire_silenced_close             │ Parent Suppressed Shotgun      ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ sharpshooter_fire-1   │ svd_fire_close                        │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ sharpshooter_s_fire-1 │ svd_fire_close_silenced               │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ shotgundb_fire-1      │ mr43_fire_close1                      │ No Suppressed Files ATM        ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ shotgundb_fire-2      │ mr43_fire_close2                      │ No Suppressed Files ATM        ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ smg_fire_end          │ ump_outdoor_close_tail                │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ smg_s_fire-1          │ stm9_fire_outdoor_silenced_close      │ Parent Suppressed SMG          ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ sniper_rifle_fire-1   │ rem700_outdoor_close1                 │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ sniper_rifle_s_fire-1 │ rem700_outdoor_silenced_close         │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ tacticalar_fire-1     │ adar_fire_outdoor_close               │                                ║
+╟───────────────────────┼───────────────────────────────────────┼────────────────────────────────╢
+║ tacticalar_s_fire-1   │ adar_fire_outdoor_silenced_close      │ Inactive                       ║
+╚═══════════════════════╧═══════════════════════════════════════╧════════════════════════════════╝
+
+
+
+- Sounds from Boom Library -
+
+╔═════════════════════════════╤═════════════════════════════════════════════╤═════════════════════════════════════════════════════════════╗
+║ 7D2D Sound                  │ Audio File Name                             │ Pack (If Applicable)                                        ║
+╠═════════════════════════════╪═════════════════════════════════════════════╪═════════════════════════════════════════════════════════════╣
+║ ak47_fire-1-4               │ AWCK AR AK 47 Close 01                      │ Assualt Weapons Construction Kit                            ║
+╟─────────────────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────────────╢
+║ desertvulture_fire-1-3      │ AWCK SR M82A1 Close 04                      │ Assualt Weapons Construction Kit                            ║
+╟─────────────────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────────────╢
+║ desertvulture_fire-1-3      │ AWDS SR L96A1 Modern Single                 │ Assualt Weapons Designed                                    ║
+╟─────────────────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────────────╢
+║ explosion_grenade1-4        │ UEDS EXPLOSION NEUTRAL SLOW CRISP Small 2.0 │ Urban Explosions Designed                                   ║
+╟─────────────────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────────────╢
+║ explosion1-3                │ UEDS EXPLOSION NEUTRAL SLOW CRISP Small 2.0 │ Urban Explosions Designed                                   ║
+╟─────────────────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────────────╢
+║ lever_action_rifle_fire-1-3 │ AWDS SR M24E1 Modern Single                 │ Assualt Weapons Designed                                    ║
+╟─────────────────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────────────╢
+║ m60_end-1                   │ AWCK AR FN FAL 5062 Single Tail             │ Assualt Weapons Construction Kit                            ║
+╟─────────────────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────────────╢
+║ m60_fire-1-4                │ AWDS AR FN FAL 50-62 Close Single           │ Assualt Weapons Designed & Assualt Weapons Construction Kit ║
+╟─────────────────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────────────╢
+║ smg_fire-1-4                │ AWDS SMG HK MP5 Close Single                │ Assualt Weapons Designed & Assualt Weapons Construction Kit ║
+╚═════════════════════════════╧═════════════════════════════════════════════╧═════════════════════════════════════════════════════════════╝
